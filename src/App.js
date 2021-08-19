@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Router } from "@reach/router";
 
-function App() {
+import "./App.css";
+
+import Index from "./view/indexView";
+import Movie from "./view/movie";
+import SearchContext from "./store/searchContext";
+
+export default function App() {
+  var searchState = useState([]);
+
+  useEffect(function() {
+    Notification.requestPermission(function(status) {
+      console.log("Notification premission status:", status);
+    });
+  },[]);
+
+  function displayNotification() {
+    if (Notification.permission === 'granted') {
+      navigator.serviceWorker.getRegistration().then(function(reg) {
+        reg.showNotification('Hello world!',{
+
+          vibrate: [200, 100, 200, 100, 200]
+        }
+        );
+      });
+    }
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SearchContext.Provider value={searchState}>
+      <div className="App">
+        <Router>
+          <Index path="/" />
+          <Movie path="/movie/:id" />
+        </Router>
+        <button onClick={displayNotification}> Notify me </button>
+      </div>
+    </SearchContext.Provider>
   );
 }
 
-export default App;

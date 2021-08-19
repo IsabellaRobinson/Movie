@@ -1,0 +1,14 @@
+.result {
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 0.1em 0.1em black;
+}
+
+.result__heading {
+    font-size: medium;
+}
+
+.result__poster {
+    height: 17em;
+    margin: 1em;
+}
