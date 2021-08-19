@@ -20,8 +20,7 @@ export default function App() {
     if (Notification.permission === 'granted') {
       navigator.serviceWorker.getRegistration().then(function(reg) {
         reg.showNotification('Hello world!',{
-
-          vibrate: [200, 100, 200, 100, 200]
+          vibrate: [330]
         }
         );
       });
