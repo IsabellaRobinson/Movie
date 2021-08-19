@@ -1,6 +1,6 @@
 .searchForm {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: #fff;
     border-radius: 2%;
 }

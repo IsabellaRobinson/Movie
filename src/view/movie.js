@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Typography } from "@material-ui/core";
 
@@ -6,7 +6,7 @@ import { Container, Typography } from "@material-ui/core";
 import Rating from "../components/rating";
 import SearchBar from "../components/searchBar";
 
-export default function Movie({id}, props) {
+export default function Movie({id}) {
     var [result, setResult] = useState({});
 
 
