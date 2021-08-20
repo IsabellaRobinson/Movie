@@ -3,37 +3,20 @@
   padding-top: 12vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AppBtn {
+  background-color: pink;
+  height: 6vh;
+  width: 26vw;
+  border-radius: 6%;
+  border: none;
+  box-shadow: rgba(168, 109, 119, 0.664) 6px 5px 6px 5px;
+  margin-bottom: 3vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MuiToolbar-root {
+  background-color: rgba(168, 109, 119, 0.836);
+  padding: 1vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

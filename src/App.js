@@ -35,7 +35,7 @@ export default function App() {
 					<Index path="/" />
 					<Movie path="/movie/:id" />
 				</Router>
-        <button onClick={displayNotification}>Notify me</button>
+        <button className="AppBtn" onClick={displayNotification}>Notify me</button>
 			</div>
 		</SearchContext.Provider>
 	);

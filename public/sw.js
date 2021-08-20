@@ -3,11 +3,10 @@ const CACHE_NAME = "movieDB";
 var urlsToCache = [
     "/",
     "/css/style.css",
-    "/sounds/mlg-air-horn.mp3"
 ];
 
-self.addEventListener("install", function(event) {
-    event.waitUntil(
+self.addEventListener("install", function(e) {
+    e.waitUntil(
         caches.open(CACHE_NAME)
         .then(function(cache) {
             console.log("cache opend");
@@ -16,14 +15,14 @@ self.addEventListener("install", function(event) {
     );
 });
 
-self.addEventListener("fetch", function(event) {
-    event.respondWith(
+self.addEventListener("fetch", function(e) {
+    e.respondWith(
         caches.match(event.request)
         .then(function(response) {
             if (response) {
                 return response
             }
-            return fetch(event.request);
+            return fetch(e.request);
         })
     );
 });
