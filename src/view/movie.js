@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa";
 import axios from "axios";
-import { Container, Typography } from "@material-ui/core";
 
 
 import Rating from "../components/rating";
@@ -28,21 +28,52 @@ export default function Movie({id}) {
 	return (
 		<>
 		<SearchBar />
-		<Container>
-			<Typography variant="h5" component="h2">{result?.Title}</Typography>
-			<Typography variant="subtitle1">{result?.Year}, {result?.Production}</Typography>
-			<Typography variant="body1">
-				Director: {result?.Director}
-			</Typography>
-			<Typography variant="body1">
-				Actors: {result?.Actors}
-			</Typography>
-			<img src={result?.Poster} alt={`Movie poster for ${result?.Title}`} />
-			<Typography variant="body2">
-				{result?.Plot}
-			</Typography>
-		</Container>
-        <Rating />
+
+		<section>
+            <div className="singleMovie">
+        
+			    <h2 className="singleMovie__title" >
+                    {result?.Title}
+                    </h2>
+
+			    <h3 className="singleMovie__subtitle">
+                    {result?.Year}, 
+                    {result?.Production}
+                </h3>
+
+			    <p className="singleMovie__dir">
+			    	Director: {result?.Director}
+			    </p>
+
+			    <p className="singleMovie__act">
+			    	Actors: {result?.Actors}
+			    </p>
+
+                <p className="singleMovie__genre">
+                    {result?.Genre}
+                </p>
+
+			    <img src={result?.Poster} alt={`Movie poster for ${result?.Title}`} />
+
+			    <p className="singleMovie__plot">
+			    	{result?.Plot}
+			    </p>
+            </div>
+            </section>
+            
+            <Rating />
+            
+            <section>
+                <div className="singleMovie__score">
+                    <p variant="p">
+                        {result?.imdbRating} <FaStar  color={ "#ffc107"} />      
+                    </p>
+                </div>
+
+
+     
+        </section>
 		</>
-	)
-}
+        )
+    }
+    

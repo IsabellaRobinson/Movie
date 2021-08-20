@@ -1,14 +1,34 @@
-.result {
+.resultCard {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
     box-shadow: 0.1em 0.1em black;
 }
 
-.result__heading {
-    font-size: medium;
+.MuiPaper-root {
+    display: flex;
+    justify-self: center;
 }
 
-.result__poster {
+.result__heading a {
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+}
+
+.result__year a {
+    text-decoration: none;
+    color: black;
+}
+
+.result__poster  {
+    display: flex;
     height: 17em;
     margin: 1em;
+    justify-content: center;
+}
+
+img {
+    border-radius: 5%;
+
 }

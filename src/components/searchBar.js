@@ -1,16 +1,21 @@
-import searchContext from "../store/searchContext";
-import { useContext, useState } from "react";
-import axios from "axios";
 import { InputBase, AppBar, Toolbar, Typography } from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
+import { useContext, useState } from "react";
 import { Link, navigate } from "@reach/router";
+
+import SearchIcon from "@material-ui/icons/Search";
+import axios from "axios";
+
+import searchContext from "../store/searchContext";
+
 import "../style/searchBar.css";
+
 
 
 
 export default function SearchBar() {
     var [ results, setResults] = useContext(searchContext);
     var [ page, setPage ] = useState(1);
+
 
     function getNextPg(e) {
         axios.get(`https://movie-databse-imdb-alternative.p.rapidapi.com`, {

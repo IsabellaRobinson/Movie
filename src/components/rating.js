@@ -24,7 +24,7 @@ var Rating = () => {
                     <FaStar 
                         className="star"
                         color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"} 
-                        size={100} 
+                        size={78} 
                         onMouseEnter={() => setHover(ratingValue)}
                         onMouseLeave={() => setHover(null)}
                         />
