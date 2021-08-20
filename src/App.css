@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   padding-top: 12vh;
-  /* background-image: url(../img/back.jpg) */
+  /* background-image: url(./images/back.jpg);
+  background-attachment:fixed;
+  background-size: cover;
+  height: 100vh; */
 }
 
 .AppBtn {
@@ -11,13 +14,19 @@
   border-radius: 6%;
   border: none;
   box-shadow: rgba(168, 109, 119, 0.664) 6px 5px 6px 5px;
-  margin-bottom: 3vh;
+  margin: 3vh;
+  margin-top: 5vh;
+  font-size: medium;
+
 }
 
 .MuiToolbar-root {
-  background-color: rgba(168, 109, 119, 0.836);
+  background-color: rgba(168, 109, 119, 0.74);
   padding: 1vh;
 }
 
+.appSpace {
+  height: 75vh;
+}
 
 

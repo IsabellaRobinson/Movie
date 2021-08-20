@@ -27,7 +27,7 @@ export default function SearchBar() {
             }, 
             headers: {
                 "x-rapidapi-key": "cbf0eada93mshda4348a7166d51bp13e11bjsna5929dc3ff1a",
-					"x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com"
+                "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com"
             }
         })
         .then(response => {

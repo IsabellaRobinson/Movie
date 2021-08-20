@@ -11,6 +11,7 @@ import { SearchContext } from "./store/searchContext";
 
 export default function App() {
 	var searchState = useState([]);
+
   // var [ value, setValue ] = useState("");
   // var [ db ] = useState({});
 
@@ -48,9 +49,9 @@ export default function App() {
   // },[]);
 
 	return (
-		<SearchContext.Provider value={searchState}>
-    {/* <SearchContext.Provider value={{searchState, value, setValue, db}}> */}
-			<div className="App">
+    <SearchContext.Provider value={searchState}>
+      {/* <SearchContext.Provider value={{searchState, value, setValue, db}}> */}
+      <div className="App">
 				<Router>
 					<Index path="/" />
 					<Movie path="/movie/:id" />

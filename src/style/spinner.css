@@ -2,12 +2,11 @@
     width: 20vw;
     height: 37vh;
     border-radius: 50%;
-    border: 20px solid rgb(206, 25, 55);
+    border: 20px solid rgb(212, 100, 119);
     position: fixed;
-    left: calc(50% - 35px);
+    left: calc(40% - 35px);
     top: calc(50% - 35px);
-
-    animation: spin 3s infinite;
+    animation: spin 2s infinite;
 }
 
 @keyframes spin {

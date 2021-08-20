@@ -1,0 +1,11 @@
+.single {
+    padding: 1vh;
+    background-color: #fff;
+    border-radius: 30px;
+
+}
+
+.singleMovie__score {
+    /* padding-bottom: 1vh; */
+    margin-bottom: 1vh;
+}

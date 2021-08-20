@@ -44,3 +44,4 @@ var Rating = () => {
 
 
 export default Rating;
+
