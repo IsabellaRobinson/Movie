@@ -1,4 +1,3 @@
-// Skal bruges når man bruger Chrome, da den cacher meget agrassivt.
 const CACHE_NAME = "movieDB"; 
 var urlsToCache = [
     "/",

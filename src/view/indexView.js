@@ -5,9 +5,6 @@ import { SearchContext } from "../store/searchContext";
 import Result from "../components/result";
 import { Container } from "@material-ui/core";
 
-import '../style/indexView.css'
-
-
 export default function Index(){
     var [ results ] = useContext(SearchContext);
 
