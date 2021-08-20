@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,16 +10,12 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
-// serviceWorkerRegistration.register();
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
+if("serviceWorker" in navigator){
+  window.addEventListener("load", function(){
       navigator.serviceWorker.register("/sw.js").then(function(registration) {
-          console.log("ServiceWorker registered successfully!");
-      }, function(err) {
-          console.log("ServiceWorker has failed!", err);
+          console.log("SW registered successfully");
+      }, function(error){
+          console.log("Something went wrong", error);
       });
   });
 }
-

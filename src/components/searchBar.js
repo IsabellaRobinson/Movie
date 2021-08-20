@@ -18,10 +18,10 @@ export default function SearchBar() {
     var [ page, setPage ] = useState(1);
 
 
-    function getNextPg(e) {
+    function getNextPg(event) {
         axios.get(`https://movie-databse-imdb-alternative.p.rapidapi.com`, {
             params: {
-                s: e.target.search.value,
+                s: event.target.search.value,
                 page: page,
                 r: "json"
             }, 
@@ -39,9 +39,9 @@ export default function SearchBar() {
 
     
 
-function handleSubmit(e) {
-    e.preventDefault();
-    getNextPg(e);
+function handleSubmit(event) {
+    event.preventDefault();
+    getNextPg(event);
 }
 
 return (

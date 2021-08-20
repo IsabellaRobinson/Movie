@@ -1,10 +1,8 @@
 {
   "short_name": "MovieDB",
   "name": "MovieDB",
-  "descriptrion": "Movie api",
   "scope": ".",
   "icons": [
- 
     {
       "src": "movie192.png",
       "type": "image/png",

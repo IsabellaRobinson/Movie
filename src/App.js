@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import { Router } from "@reach/router";
 
 import "./App.css";
@@ -18,11 +18,11 @@ export default function App() {
 
 
 // Notification
-  // useEffect(function() {
-  //   Notification.requestPermission(function(status) {
-  //       console.log('Notification permission status:', status);
-  //   });
-  // }, []);
+  useEffect(function() {
+    Notification.requestPermission(function(status) {
+        console.log('Notification permission status:', status);
+    });
+  }, []);
 
   // useEffect(() => {
   //   if (!window.indexedDB) {
