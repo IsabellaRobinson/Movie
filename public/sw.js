@@ -15,14 +15,14 @@ self.addEventListener("install", function(e) {
     );
 });
 
-self.addEventListener("fetch", function(e) {
-    e.respondWith(
-        caches.match(event.request)
+self.addEventListener("fetch", function(event) {
+    event.respondWith(
+        caches.match(e.request)
         .then(function(response) {
             if (response) {
                 return response
             }
-            return fetch(e.request);
+            return fetch(event.request);
         })
     );
 });

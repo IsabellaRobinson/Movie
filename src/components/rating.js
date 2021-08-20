@@ -1,13 +1,18 @@
-import React, { useState } from "react"
-import { FaStar } from "react-icons/fa";
+// import React, { useState, useEffect } from 'react';
 
-import "../style/rating.css";
+import { useState } from "react";
+import { FaStar } from 'react-icons/fa';
+
+
+
+import '../style/rating.css';
 
 var Rating = () => {
 
 
     var [rating, setRating] = useState(null);
     var [hover, setHover] = useState(null);
+
     return (
         <div>
             {[...Array(5)].map((star, i) => {
@@ -34,5 +39,8 @@ var Rating = () => {
         </div>
     );
 }
+
+
+
 
 export default Rating;

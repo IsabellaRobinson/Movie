@@ -1,13 +1,13 @@
 import { useContext } from "react";
 
 import SearchBar from "../components/searchBar";
-import searchContext from "../store/searchContext";
+import { SearchContext } from "../store/searchContext";
 import Result from "../components/result";
 import { Container } from "@material-ui/core";
 
 
 export default function Index(){
-    var [results] = useContext(searchContext);
+    var [results] = useContext(SearchContext);
 
     return(
     <>

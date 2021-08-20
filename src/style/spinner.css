@@ -1,0 +1,17 @@
+.spinner {
+    width: 20vw;
+    height: 37vh;
+    border-radius: 50%;
+    border: 20px solid rgb(206, 25, 55);
+    position: fixed;
+    left: calc(50% - 35px);
+    top: calc(50% - 35px);
+
+    animation: spin 3s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+}

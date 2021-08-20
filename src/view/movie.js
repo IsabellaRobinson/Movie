@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import { FaStar } from 'react-icons/fa';
+import axios from 'axios';
+// import Localbase from 'localbase';
+
+import Rating from '../components/rating';
+import SearchBar from '../components/searchBar';
+import Spinner from '../components/spinner';
 
 
-import Rating from "../components/rating";
-import SearchBar from "../components/searchBar";
 
 export default function Movie({id}) {
-	var [result, setResult] = useState({});
+	var [result, setResult] = useState();
 
+
+// HENTER DATA OMRKING FILMENE
 	useEffect(function() {
 		axios.get(`https://movie-database-imdb-alternative.p.rapidapi.com`, {
 			params: {
@@ -27,39 +32,43 @@ export default function Movie({id}) {
 
 	return (
 		<>
+        <div className="single">
+            {
+            	result === undefined ?  <Spinner/> :
+                <>
+		<>
 		<SearchBar />
-
 		<section>
             <div className="singleMovie">
-        
+		
 			    <h2 className="singleMovie__title" >
                     {result?.Title}
                     </h2>
 
-			    <h3 className="singleMovie__subtitle">
+				<h3 className="singleMovie__subtitle">
                     {result?.Year}, 
                     {result?.Production}
                 </h3>
 
-			    <p className="singleMovie__dir">
+				<p className="singleMovie__dir">
 			    	Director: {result?.Director}
 			    </p>
 
-			    <p className="singleMovie__act">
+				<p className="singleMovie__act">
 			    	Actors: {result?.Actors}
 			    </p>
 
-                <p className="singleMovie__genre">
+				<p className="singleMovie__genre">
                     {result?.Genre}
                 </p>
 
-			    <img src={result?.Poster} alt={`Movie poster for ${result?.Title}`} />
+				<img src={result?.Poster} alt={`Movie poster for ${result?.Title}`} />
 
-			    <p className="singleMovie__plot">
+				<p className="singleMovie__plot">
 			    	{result?.Plot}
 			    </p>
             </div>
-            </section>
+        </section>
             
             <Rating />
             
@@ -69,11 +78,13 @@ export default function Movie({id}) {
                         {result?.imdbRating} <FaStar  color={ "#ffc107"} />      
                     </p>
                 </div>
-
-
-     
         </section>
-		</>
-        )
-    }
+	</>
+	</>
+        }
+        </div>
+        </>
+			
+			)
+		}
     

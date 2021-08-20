@@ -2,6 +2,7 @@
   "short_name": "MovieDB",
   "name": "MovieDB",
   "descriptrion": "Movie api",
+  "scope": ".",
   "icons": [
  
     {
@@ -15,7 +16,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://vigorous-tesla-a2eed3.netlify.app",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#FA4D8F",
   "background_color": "#FA4D8F"

@@ -5,15 +5,16 @@ import { Link, navigate } from "@reach/router";
 import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
 
-import searchContext from "../store/searchContext";
+import { SearchContext } from "../store/searchContext";
 
 import "../style/searchBar.css";
 
 
 
 
+
 export default function SearchBar() {
-    var [ results, setResults] = useContext(searchContext);
+    var [ results, setResults] = useContext(SearchContext);
     var [ page, setPage ] = useState(1);
 
 
@@ -35,6 +36,8 @@ export default function SearchBar() {
             navigate("/");
         })
     }
+
+    
 
 function handleSubmit(e) {
     e.preventDefault();
